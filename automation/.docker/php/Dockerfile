@@ -67,6 +67,6 @@ CMD [ "symfony", "server:start", "--port=8080" ]
 ######################################
 FROM base AS prod
 
-COPY --from=build /var/www/html /var/www/html
+COPY --from=dev /var/www/html /var/www/html
 
 CMD [ "symfony", "server:start", "--port=8080" ]
