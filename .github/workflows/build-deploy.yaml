@@ -24,10 +24,10 @@ jobs:
         docker build . --file=automation/.docker/php/Dockerfile -t azuredemomai.azurecr.io/phpdemoapp:${{ github.run_id }}
         docker push azuredemomai.azurecr.io/phpdemoapp:${{ github.run_id }}
       
-    # - uses: azure/webapps-deploy@v2
-    #   with:
-    #     app-name: 'demomai'
-    #     images: 'azuredemomai.azurecr.io/phpdemoapp:${{ github.run_id }}
+    - uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'maidemo'
+        images: 'azuredemomai.azurecr.io/phpdemoapp:${{ github.run_id }}
     
     - name: Azure logout
       run: |
