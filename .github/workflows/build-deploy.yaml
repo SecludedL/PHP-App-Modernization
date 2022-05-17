@@ -27,7 +27,7 @@ jobs:
     - uses: azure/webapps-deploy@v2
       with:
         app-name: 'maidemo'
-        images: 'azuredemomai.azurecr.io/phpdemoapp:${{ github.run_id }}
+        images: 'azuredemomai.azurecr.io/phpdemoapp:${{ github.run_id }}'
     
     - name: Azure logout
       run: |
